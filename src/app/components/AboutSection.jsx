@@ -10,9 +10,9 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
+        <li>PHP</li>
+        <li>Tailwind</li>
+        <li>LiteSQL</li>
         <li>JavaScript</li>
         <li>React</li>
       </ul>
@@ -23,18 +23,19 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
+        <li>smkn 21 jakarta</li>
       </ul>
     ),
   },
   {
-    title: "Certifications",
-    id: "certifications",
+    title: "Hobbies",
+    id: "hobbies",
     content: (
       <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+        <li>Playing video games</li>
+        <li>Reading tech blogs</li>
+        <li>Coding personal projects</li>
+        <li>Exploring new programming languages</li>
       </ul>
     ),
   },
@@ -53,16 +54,13 @@ const AboutSection = () => {
   return (
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={500} height={500} />
+        <Image src="/images/ditt.jpg" width={500} height={500} />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+          I am a beginner software developer and game creator, learning HTML, Next.js, PHP, CSS, Git, React, JavaScript, Node.js, and Unity for game development. I’m interested in making dynamic and responsive web apps, and trying to build interactive gaming experiences. I learn quickly and am always excited to improve my skills. I enjoy working in a team and love collaborating with others to create cool applications.
+
+In my free time, I also like playing sports like badminton, basketball, and futsal.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
@@ -80,11 +78,11 @@ const AboutSection = () => {
               Education{" "}
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
+              selectTab={() => handleTabChange("hobbies")}
+              active={tab === "hobbies"}
             >
               {" "}
-              Certifications{" "}
+              Hobbies{" "}
             </TabButton>
           </div>
           <div className="mt-8">
